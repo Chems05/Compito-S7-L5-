@@ -1,3 +1,10 @@
+const id = new URLSearchParams(window.location.search).get("product_id");
+
+const URL = id
+? "https://striveschool-api.herokuapp.com/api/product/" + id
+: "https://striveschool-api.herokuapp.com/api/product/";
+const method = id? "PUT" : "POST";
+
 document.getElementById('form').addEventListener('submit', function (e) {
     e.preventDefault(); 
     
@@ -39,6 +46,23 @@ document.getElementById('form').addEventListener('submit', function (e) {
         alert('Error creating product');
     });
 });
+
+reset.addEventListener("click", function (e) {
+    e.preventDefault();
+  
+    const _id = (document.getElementById("_id").value = "");
+    const name = (document.getElementById("name").value = "");
+    const description = (document.getElementById("description").value = "");
+    const price = (document.getElementById("price").value = "");
+    const imageUrl = (document.getElementById("imageUrl").value = "");
+    const brand = (document.getElementById("brand").value = "");
+  });
+
+//   document.getElementById('removeProductBtn').addEventListener('click', function () {
+//     const productId = prompt('Enter product ID to delete:');
+    
+
+
 
 
 

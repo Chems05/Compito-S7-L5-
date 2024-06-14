@@ -1,43 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
-    <main class="ms-5 mx-5 py-5">
-        <p class="h1"> CREA LA TUA SCIMMIA</p>
-        <main class="container py-5">
-            <h1 class="mb-4">Back Office</h1>
-            <form id="dataForm">
-                <div class="mb-3">
-                    <label for="inputMonkeyName" class="form-label">Nome della Scimmia</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter monkey's name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="inputMonkeyName" class="form-label">immagine formato: Url</label>
-                    <input type="text" class="form-control" id="imageUrl" placeholder="Enter monkey's name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="inputPrice" class="form-label">Prezzo</label>
-                    <input type="number" class="form-control" id="price" placeholder="Enter price" required>
-                </div>
-                <div class="mb-3">
-                    <label for="inputDescription" class="form-label">Descrizione della Scimmia</label>
-                    <textarea class="form-control" id="description" rows="3" placeholder="Enter monkey's description" required></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="inputBrand" class="form-label">Brand</label>
-                    <input type="text" class="form-control" id="brand" placeholder="Enter brand name" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </main>
-    <script src="./scrypt/back-office.js"></script>
-</body>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,10 +14,20 @@
   </head>
   <body>
     <main class="ms-5 mx-5 py-5">
-      <p class="h1">CREA IL TUO PRODOTTO</p>
+      <p class="h1">CREA LA TUA SCIMMIA</p>
       <main class="container py-5">
         <h1 class="mb-4">Back Office</h1>
         <form id="form">
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="imageUrl"
+                  placeholder="Enter id"
+                  required
+                />
+              </div>
           <div class="mb-3">
             <label for="name" class="form-label">Nome del Prodotto</label>
             <input
@@ -111,6 +81,8 @@
             />
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+          <button type="button" class="btn btn-danger" id="removeProductBtn">Rimuovi Prodotto</button>
         </form>
       </main>
     </main>
